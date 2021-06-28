@@ -8,7 +8,7 @@ const Bandorban = () => {
      const [resorts, setResorts] = useState([]);
     
     useEffect(() => {
-        fetch('http://localhost:5000/resorts')
+        fetch('https://secret-coast-76571.herokuapp.com/resorts')
             .then(res => res.json())
             .then(data => setResorts(data))
     }, [])
@@ -19,7 +19,7 @@ const Bandorban = () => {
     
     return (
 
-         <div>
+         <div className="overflow-hidden">
             <MyNavbar></MyNavbar>
             <h1 className="m-3 text-center">Resorts In Bandorban</h1>
             

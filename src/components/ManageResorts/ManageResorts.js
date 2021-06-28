@@ -7,14 +7,14 @@ const ManageResorts = () => {
     const [resorts, setResorts] = useState([])
     
     useEffect(() => {
-        fetch('http://localhost:5000/resorts')
+        fetch('https://secret-coast-76571.herokuapp.com/resorts')
             .then(res => res.json())
             .then(data => setResorts(data))
     }, [])
     
     const handleDelete = id => {
     
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://secret-coast-76571.herokuapp.com/delete/${id}`, {
         
         method: 'DELETE'
         

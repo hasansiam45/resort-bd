@@ -12,7 +12,7 @@ const MyBookings = () => {
     
     useEffect(() => {
         
-        fetch('http://localhost:5000/bookings?email=' + loggedInUser.email)
+        fetch('https://secret-coast-76571.herokuapp.com/bookings?email=' + loggedInUser.email)
             .then(res => res.json())
             .then(data => setBookings(data))
     }, [])

@@ -8,7 +8,7 @@ const Sylhet = () => {
         const [resorts, setResorts] = useState([]);
     
     useEffect(() => {
-        fetch('http://localhost:5000/resorts')
+        fetch('https://secret-coast-76571.herokuapp.com/resorts')
             .then(res => res.json())
             .then(data => setResorts(data))
     }, [])
@@ -17,7 +17,7 @@ const Sylhet = () => {
     const sylhetResorts = resorts.filter(rs => rs.district === 'SYLHET')
     
     return (
-          <div>
+          <div className="overflow-hidden">
             <MyNavbar></MyNavbar>
             <h1 className="m-3 text-center">Resorts In Sylhet</h1>
             

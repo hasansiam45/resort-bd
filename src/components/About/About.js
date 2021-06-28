@@ -4,9 +4,10 @@ import Fade from 'react-reveal/Fade';
 
 const About = () => {
     return (
-        <div style={{ padding: '2%'}}>
-            <div className="">
-            <h2 className="text-center m-5 text-success">About Us</h2>
+        <div className="overflow-hidden">
+             <h2 className="text-center m-5 text-success">About Us</h2>
+            <div className="d-flex align-items-center">
+           
             <div className="row ">
                 
                     <div className="col-md-6 d-flex align-items-center justify-content-center mb-3">
@@ -19,7 +20,7 @@ const About = () => {
                         </div>
                 </div>
                 
-                    <div className="col-md-6 d-flex justify-content-center mb-3">
+                    <div className="col-md-6 d-flex justify-content-center">
                         <Fade right>
                             <p className="text-justify px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente similique dolorem, vero explicabo in ea sit fugiat unde eius fuga suscipit odit obcaecati eveniet maxime nostrum dolore quaerat. Expedita dolore, aliquam explicabo eveniet harum nisi, consectetur vel provident exercitationem saepe ratione distinctio dolores maxime perferendis quas quisquam veritatis, mollitia perspiciatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente similique dolorem, vero explicabo in ea sit fugiat unde eius fuga suscipit odit obcaecati eveniet maxime nostrum dolore quaerat.</p>
                         </Fade>

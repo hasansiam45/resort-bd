@@ -19,7 +19,7 @@ const AddResorts = () => {
             contact: data.contact
         }
         
-        const url = 'http://localhost:5000/addResorts'
+        const url = 'https://secret-coast-76571.herokuapp.com/addResorts'
         fetch(url, {
             
             method: 'POST',

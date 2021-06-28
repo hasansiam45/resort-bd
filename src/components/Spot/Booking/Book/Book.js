@@ -18,7 +18,7 @@ const Book = () => {
 
     
     useEffect(() => {
-        fetch('http://localhost:5000/resorts')
+        fetch('https://secret-coast-76571.herokuapp.com/resorts')
             .then(res => res.json())
             .then(data => setAllResortDetails(data))
     }, [])
@@ -48,7 +48,7 @@ const Book = () => {
 
         const bookingDetails = {...loggedInUser, resort: resortDetails?.name, district: resortDetails?.district, checkIn: formData.checkIn, livingCost, day,  bookingDate: new Date()}
 
-        fetch('http://localhost:5000/addBookings', {
+        fetch('https://secret-coast-76571.herokuapp.com/addBookings', {
         
             method: 'POST',
             headers: {

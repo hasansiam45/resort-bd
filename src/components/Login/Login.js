@@ -11,7 +11,7 @@ import { UserContext } from '../../App';
 import img from '../../img/10.jpg';
 import SignUp from './SignUp';
 import SignIn from './SignIn';
-
+import Footer from '../Footer/Footer';
 
 
 const Login = () => {
@@ -67,7 +67,7 @@ const Login = () => {
 
     return (
         
-        <div>
+        <div className="overflow-hidden">
             <MyNavbar></MyNavbar>
             {/* <h1>Welcome{loggedInUser.email}</h1> */}
             <div className="row bg-dark text-white">
@@ -102,7 +102,7 @@ const Login = () => {
                 </div>
             </Fade>
             </div>
-            
+            <Footer></Footer>
         </div>
     )
 }

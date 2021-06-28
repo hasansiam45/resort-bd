@@ -15,7 +15,7 @@ const AddReviews = () => {
               review: data.msg
           };
           
-          fetch('http://localhost:5000/addReviews', {
+          fetch('https://secret-coast-76571.herokuapp.com/addReviews', {
           
               method: 'POST',
               headers: {

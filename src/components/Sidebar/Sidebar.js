@@ -10,7 +10,7 @@ const Sidebar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     
     useEffect(() => {
-        fetch('http://localhost:5000/admins')
+        fetch('https://secret-coast-76571.herokuapp.com/admins')
             .then(res => res.json())
             .then(data => setAllAdmins(data))
     }, [])

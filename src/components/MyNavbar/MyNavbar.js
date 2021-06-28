@@ -28,7 +28,7 @@ const MyNavbar = () => {
                         
                         
 
-                        <NavDropdown title="Spot" id="responsive-nav-dropdown" className="mx-3 p-2">
+                        <NavDropdown title="Spot" id="responsive-nav-dropdown" className="mx-3 px-2">
                             
                             <LinkContainer to="/dhaka">
                                 <NavDropdown.Item >Dhaka</NavDropdown.Item>

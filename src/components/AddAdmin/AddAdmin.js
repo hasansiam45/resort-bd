@@ -10,7 +10,7 @@ const AddAdmin = () => {
     
         const onSubmit = data => {
             
-            fetch('http://localhost:5000/addAdmins',{
+            fetch('https://secret-coast-76571.herokuapp.com/addAdmins',{
 
             method: 'POST',
             headers: {
