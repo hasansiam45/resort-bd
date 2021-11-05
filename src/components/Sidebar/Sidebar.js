@@ -7,7 +7,9 @@ import './Sidebar.css'
 const Sidebar = () => {
     
     const [allAdmins, setAllAdmins] = useState([])
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    // const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    console.log(loggedInUser)
     
     useEffect(() => {
         fetch('https://secret-coast-76571.herokuapp.com/admins')
@@ -15,7 +17,7 @@ const Sidebar = () => {
             .then(data => setAllAdmins(data))
     }, [])
 
-    const isAdmin = allAdmins.find(admin => admin.email == loggedInUser.email)
+    const isAdmin = allAdmins.find(admin => admin.email == loggedInUser)
     console.log(isAdmin)
     return (
         

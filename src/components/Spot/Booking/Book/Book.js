@@ -14,7 +14,7 @@ const Book = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [formData,setFormData] = useState(null)
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const [allResortDetails,setAllResortDetails] = useState([])
+    const [allResortDetails,setAllResortDetails] = useState([]);
 
     
     useEffect(() => {
@@ -25,11 +25,8 @@ const Book = () => {
     
     
     const resortDetails = allResortDetails.find(details => details._id === id)
-
-    
     
     const onSubmit = data => {
-        setFormData(data)
         alert('form submitted successfully')
     }
 
@@ -92,7 +89,7 @@ const Book = () => {
                         <input className="m-1 px-2" type="date" placeholder="Enter Check In Date" {...register("checkIn", { required: true })} /> <br />
                         
                 
-                        <input className="m-1" type="number" placeholder="Enter amount of day" {...register("day",{ required: true })} /> <br /> 
+                        <input className="m-1" type="number" min="1" placeholder="Enter amount of day" {...register("day",{ required: true })} /> <br /> 
                 
                 
                         <input className="m-1" type="number" placeholder="Your Phone Number" {...register("phone",{ required: true })} /> <br /> <br />

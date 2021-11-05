@@ -40,6 +40,7 @@ const Login = () => {
         }
         
         setLoggedInUser(signedInUser);
+        localStorage.setItem('loggedInUser',signedInUser.email);
         alert('logged In successfully')
         history.replace(from)
 
