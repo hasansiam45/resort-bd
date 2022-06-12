@@ -9,58 +9,44 @@ import MyNavbar from '../../../MyNavbar/MyNavbar';
 import StripeCheckout from 'react-stripe-checkout';
 
 const Book = () => {
-    
+
     const { id } = useParams();
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [formData,setFormData] = useState(null)
+    const [formData,setFormData] = useState(null);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [allResortDetails,setAllResortDetails] = useState([]);
 
-    
     useEffect(() => {
         fetch('https://secret-coast-76571.herokuapp.com/resorts')
             .then(res => res.json())
             .then(data => setAllResortDetails(data))
     }, [])
     
-    
     const resortDetails = allResortDetails.find(details => details._id === id)
     
     const onSubmit = data => {
-        alert('form submitted successfully')
+        alert('form submitted successfully');
+        setFormData(data);
     }
-
-    
-
     
     // payment system
     
     const onToken = (token) => {
-        
         alert('Payment Successful')
-
         const day = formData.day
         const cost = resortDetails.price
         const livingCost = day * cost
-
-        const bookingDetails = {...loggedInUser, resort: resortDetails?.name, district: resortDetails?.district, checkIn: formData.checkIn, livingCost, day,  bookingDate: new Date()}
+        const bookingDetails = {name: formData.name || localStorage.getItem('username'), email: localStorage.getItem('loggedInUser'), resort: resortDetails?.name, district: resortDetails?.district, checkIn: formData.checkIn, livingCost, day,  bookingDate: new Date()}
 
         fetch('https://secret-coast-76571.herokuapp.com/addBookings', {
-        
             method: 'POST',
             headers: {
-            
             'content-type' : 'application/json'
-            
             },
-            
             body: JSON.stringify(bookingDetails)
         
         }).then(res => {
-
             console.log(res)
-        
-        })
+        });
     }
     
     return (
@@ -75,11 +61,11 @@ const Book = () => {
                         <form className="p-5 bg-success text-white" onSubmit={handleSubmit(onSubmit)}>
                         <h2>Please Fill Up the form</h2>
                     
-                        <input className="m-1" value={resortDetails?.district} /> <br />
+                        <input className="m-1" defaultValue={resortDetails?.district} /> <br />
 
-                        <input className="m-1" value={resortDetails?.name} /> <br />
+                        <input className="m-1" defaultValue={resortDetails?.name} /> <br />
                 
-                        <input className="m-1" value={`${resortDetails?.price} BDT/Day`} /> <br /> 
+                        <input className="m-1" defaultValue={`${resortDetails?.price} BDT/Day`} /> <br /> 
                 
                         
                         <input className="m-1" type="text" placeholder="Your Name" {...register("name",{ required: true })} /> <br /> 

@@ -14,10 +14,8 @@ const SignIn = () => {
    if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
     }
-    
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    
     
          const handleSubmit = (event) => {
             event.preventDefault();
@@ -25,34 +23,28 @@ const SignIn = () => {
             .then((userCredential) => {
                 // Signed in
                    const { displayName, email } = userCredential.user;
-        
                     const signedInUser = {
                         name: displayName,
                         email
                     }
-        
                 setLoggedInUser(signedInUser);
+                localStorage.setItem('username',signedInUser.name);
+                localStorage.setItem('loggedInUser',signedInUser.email);
                 alert('signed in successfully')
                 history.replace(from)
-                
-
                 // ...
             })
             .catch((error) => {
-                var errorCode = error.code;
                 var errorMessage = error.message;
                 alert(errorMessage)
             });
-    
             };
     return (
               <div>
             <form action="" onSubmit={handleSubmit}>
-            
                 <input placeholder="Your Email" type="email" onChange={(e)=>setEmail(e.target.value)} /> <br /> <br />
                 <input placeholder="Your Password" type="password" onChange={(e)=>setPassword(e.target.value)} /> <br /> <br />
                 <button className="btn btn-primary"type="submit">Sign In</button>
-                
             </form>
         </div>
     )

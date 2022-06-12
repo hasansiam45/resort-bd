@@ -25,7 +25,6 @@ const AddAdmin = () => {
         })
             .then(res => {
                 alert('admin added successfully')
-                console.log(res)
             })
 
     }

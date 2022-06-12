@@ -7,16 +7,9 @@ const Card = ({ resort }) => {
     const history = useHistory();
     
     const handleClick = (id) => {
-    
-        history.push(`/book/${id}`)
-    
+        history.push(`/details/${id}`)
     }
-    
-    
-    
     return (
-        
-     
             <div className="col-md-4 my-3 px-5">
                  <Zoom clear>
                 <div className="card rounded">
@@ -24,13 +17,11 @@ const Card = ({ resort }) => {
                     <div className="card-body bg-dark text-white">
                         <h5 className="card-title">{resort.name}</h5>
                         <p className="card-text">{desc}...</p>
-                        <button className="btn btn-primary" onClick={()=>handleClick(resort._id)}>Book Now</button>
+                        <button className="btn btn-primary" onClick={()=>handleClick(resort._id)}>View Details</button>
                     </div>
                 </div>
-                </Zoom>
-                
+                </Zoom>  
             </div>
-        
     )
 }
 

@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import React, {createContext, useState} from "react";
+import React, { createContext, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,108 +24,111 @@ import AllBookings from './components/AllBookings/AllBookings';
 import MyBookings from './components/MyBookings/MyBookings';
 import AddReviews from './components/AddReviews/AddReviews';
 import ManageResorts from './components/ManageResorts/ManageResorts';
+import ResortDetails from './components/Spot/Details/ResortDetails';
 
 export const UserContext = createContext()
 
 
 function App() {
-  
+
   const [loggedInUser, setLoggedInUser] = useState({});
 
   return (
-    
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-    
-     <Router>
-      <Switch>
-        
-        <Route path="/home">
-          <Home></Home>
-        </Route>
 
-        <Route path="/about">
-          <AboutUs></AboutUs>
-        </Route>
-        
-        <PrivateRoute path="/dashboard">
-          <Dashboard></Dashboard>
-        </PrivateRoute>
-        
-        
-        <PrivateRoute path="/addResorts">
-         <AddResorts></AddResorts>
-          </PrivateRoute>
-          
-          <PrivateRoute path="/addAdmin">
-         <AddAdmin></AddAdmin>
-          </PrivateRoute>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+
+      <Router>
+        <Switch>
+
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+
+          <Route path="/about">
+            <AboutUs></AboutUs>
+          </Route>
 
           <Route path="/addReviews">
-         <AddReviews></AddReviews>
+            <AddReviews></AddReviews>
           </Route>
-          
-          <PrivateRoute path="/manageResorts">
-         <ManageResorts></ManageResorts>
-          </PrivateRoute>
-          
-          
-          <PrivateRoute path="/allBookings">
-         <AllBookings></AllBookings>
-          </PrivateRoute>
-          
-          <PrivateRoute path="/bookings">
-         <MyBookings></MyBookings>
-        </PrivateRoute>
-        
-        <Route path="/contact">
-         <Contact></Contact>
+
+          <Route path="/contact">
+            <Contact></Contact>
           </Route>
-          
-        <Route path="/login">
-          <Login></Login>
+
+          <Route path="/login">
+            <Login></Login>
           </Route>
-          
+
           {/* ALL SPOT ROUTE */}
-          
-        <Route path="/dhaka">
-          <Dhaka></Dhaka>
+
+          <Route path="/dhaka">
+            <Dhaka></Dhaka>
           </Route>
-          
+
           <Route path="/bandorban">
-          <Bandorban></Bandorban>
+            <Bandorban></Bandorban>
           </Route>
 
           <Route path="/chittagong">
-          <Chittagong></Chittagong>
+            <Chittagong></Chittagong>
           </Route>
-          
+
           <Route path="/cox">
-          <Cox></Cox>
+            <Cox></Cox>
           </Route>
-          
-          
+
           <Route path="/sajek">
-          <Sajek></Sajek>
+            <Sajek></Sajek>
           </Route>
-          
+
           <Route path="/sylhet">
-          <Sylhet></Sylhet>
+            <Sylhet></Sylhet>
+          </Route>
+
+          <Route path="/details/:id">
+            <ResortDetails></ResortDetails>
           </Route>
           
-          <PrivateRoute path="/book/:id">
-          <Book></Book>
+          {/* Private ROUTE */}
+
+          <PrivateRoute path="/dashboard">
+            <Dashboard></Dashboard>
           </PrivateRoute>
-          
-          
-        <Route exact path="/">
-          <Home></Home>
-        </Route>
-        
-      </Switch>
-    </Router>
-    
+
+          <PrivateRoute path="/addResorts">
+            <AddResorts></AddResorts>
+          </PrivateRoute>
+
+          <PrivateRoute path="/addAdmin">
+            <AddAdmin></AddAdmin>
+          </PrivateRoute>
+
+          <PrivateRoute path="/manageResorts">
+            <ManageResorts></ManageResorts>
+          </PrivateRoute>
+
+          <PrivateRoute path="/allBookings">
+            <AllBookings></AllBookings>
+          </PrivateRoute>
+
+          <PrivateRoute path="/bookings">
+            <MyBookings></MyBookings>
+          </PrivateRoute>
+
+          <PrivateRoute path="/book/:id">
+            <Book></Book>
+          </PrivateRoute>
+
+        </Switch>
+      </Router>
+
     </UserContext.Provider>
-    
+
   );
 }
 

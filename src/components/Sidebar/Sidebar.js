@@ -1,13 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { UserContext } from '../../App';
 import './Sidebar.css'
 const Sidebar = () => {
     
-    const [allAdmins, setAllAdmins] = useState([])
-    // const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const [allAdmins, setAllAdmins] = useState([]);
     const loggedInUser = localStorage.getItem('loggedInUser');
     console.log(loggedInUser)
     

@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 
 const About = () => {
     return (
-        <div className="overflow-hidden">
+        <div style={{height: '80vh'}} className="overflow-hidden">
              <h2 className="text-center m-5 text-success">About Us</h2>
             <div className="d-flex align-items-center">
            
