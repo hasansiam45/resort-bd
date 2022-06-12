@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 
 const About = () => {
     return (
-        <div style={{height: '80vh'}} className="overflow-hidden">
+        <div style={{height: '80vh', overflowY: 'auto'}}>
              <h2 className="text-center m-5 text-success">About Us</h2>
             <div className="d-flex align-items-center">
            
@@ -22,7 +22,7 @@ const About = () => {
                 
                     <div className="col-md-6 d-flex justify-content-center">
                         <Fade right>
-                            <p className="text-justify px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente similique dolorem, vero explicabo in ea sit fugiat unde eius fuga suscipit odit obcaecati eveniet maxime nostrum dolore quaerat. Expedita dolore, aliquam explicabo eveniet harum nisi, consectetur vel provident exercitationem saepe ratione distinctio dolores maxime perferendis quas quisquam veritatis, mollitia perspiciatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente similique dolorem, vero explicabo in ea sit fugiat unde eius fuga suscipit odit obcaecati eveniet maxime nostrum dolore quaerat.</p>
+                            <p className="text-justify px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente similique dolorem, vero explicabo in ea sit fugiat unde eius fuga suscipit odit obcaecati eveniet maxime nostrum dolore quaerat. Expedita dolore, aliquam explicabo eveniet harum nisi, consectetur vel provident exercitationem saepe ratione distinctio dolores maxime perferendis quas quisquam veritatis, mollitia perspiciatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente similique dolorem, vero explicabo in ea sit fugiat unde eius fuga suscipit odit obcaecati eveniet maxime nostrum dolore quaerat.suscipit odit obcaecati eveniet maxime nostrum dolore quaerat. Expedita dolore, aliquam explicabo eveniet harum nisi, consectetur vel provident exercitationem saepe ratione distinctio dolores maxime perferendis quas quisquam veritatis, mollitia perspiciatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente similique dolorem, vero explicabo in ea sit fugiat unde eius fuga suscipit odit obcaecati eveniet maxime nostrum dolore quaerat..suscipit odit obcaecati eveniet maxime nostrum dolore quaerat. Expedita dolore, aliquam explicabo eveniet harum nisi, consectetur vel provident exercitationem saepe ratione distinctio dolores maxime perferendis quas quisquam veritatis, mollitia perspiciatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente similique dolorem, vero explicabo in ea sit fugiat unde eius fuga suscipit odit obcaecati eveniet maxime nostrum dolore quaerat.adipisicing elit. Sapiente similique dolorem, vero explicabo in ea sit fugiat unde eius fuga suscipit odit obcaecati eveniet maxime nostrum dolore quaerat.</p>
                         </Fade>
                 </div>
                 </div>

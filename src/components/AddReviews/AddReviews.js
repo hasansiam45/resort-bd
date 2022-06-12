@@ -51,7 +51,7 @@ const AddReviews = () => {
 
         <div>
             <MyNavbar></MyNavbar>
-            <div style={{ height: '80vh', backgroundColor: '#212529' }}>
+            <div style={{ height: '80vh', overflowY: 'auto', backgroundColor: '#212529' }}>
                 <div className="text-center text-white p-3">
                 <h2>Add Review</h2>
                     <form className="p-5 bg-dark text-white" onSubmit={handleSubmit(onSubmit)}>

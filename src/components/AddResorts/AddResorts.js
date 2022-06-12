@@ -58,7 +58,7 @@ const AddResorts = () => {
         <div className="bg-dark text-white">
             <MyNavbar></MyNavbar>
 
-            <div style={{ height: '80vh' }}>
+            <div style={{ height: '80vh', overflowY: 'auto' }}>
                 <h2 className="text-center m-3">Add Resorts From Here</h2>
 
                 <div className="d-flex justify-content-center">

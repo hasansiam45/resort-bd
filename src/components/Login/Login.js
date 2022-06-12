@@ -66,7 +66,7 @@ const Login = () => {
         <div className="overflow-hidden">
             <MyNavbar></MyNavbar>
             {/* <h1>Welcome{loggedInUser.email}</h1> */}
-            <div style={{height: '80vh'}} className="row bg-dark text-white">
+            <div style={{height: '80vh', overflowY: 'auto'}} className="row bg-dark text-white">
                 <Fade left>
                     <div className="col-md-6 text-center">
                         <img src={img} style={{ width: '300px', height: '300px', borderRadius: '50%', marginTop: '10%' }} alt="" />

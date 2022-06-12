@@ -14,7 +14,7 @@ const Contact = () => {
     return (
         <div className="text-center bg-dark text-white">
             <MyNavbar></MyNavbar>
-            <div style={{ height: '80vh' }}>
+            <div style={{ height: '80vh', overflowY: 'auto' }}>
                 <h3 className="p-3">Contact With Us</h3>
                 <form onSubmit={sendEmail}>
                     <input className="p-2 rounded w-50" type="text" name="name" placeholder="Your Name" /> <br /> <br />
