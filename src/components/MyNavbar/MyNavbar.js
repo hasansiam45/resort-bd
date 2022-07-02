@@ -36,20 +36,28 @@ const MyNavbar = () => {
                                 <NavDropdown.Item >Chittagong</NavDropdown.Item>
                             </LinkContainer>
                             
-                            <LinkContainer to="/sajek">
-                                <NavDropdown.Item >Sajek</NavDropdown.Item>
+                            <LinkContainer to="/barisal">
+                                <NavDropdown.Item >Barisal</NavDropdown.Item>
                             </LinkContainer>
 
                             <LinkContainer to="/sylhet">
                                 <NavDropdown.Item >Sylhet</NavDropdown.Item>
                             </LinkContainer>
                             
-                            <LinkContainer to="/bandorban">
-                                <NavDropdown.Item >Bandorban</NavDropdown.Item>
+                            <LinkContainer to="/khulna">
+                                <NavDropdown.Item >Khulna</NavDropdown.Item>
                             </LinkContainer>
                             
-                            <LinkContainer to="/cox">
-                                <NavDropdown.Item >Cox's Bazar</NavDropdown.Item>
+                            <LinkContainer to="/rajshahi">
+                                <NavDropdown.Item >Rajshahi</NavDropdown.Item>
+                            </LinkContainer>
+
+                            <LinkContainer to="/rangpur">
+                                <NavDropdown.Item >Rangpur</NavDropdown.Item>
+                            </LinkContainer>
+
+                            <LinkContainer to="/mymensingh">
+                                <NavDropdown.Item >Mymensingh</NavDropdown.Item>
                             </LinkContainer>
                             
                        

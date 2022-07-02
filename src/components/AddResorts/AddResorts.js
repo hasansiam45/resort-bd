@@ -1,21 +1,24 @@
 import React from 'react'
 import axios from 'axios';
 import { useForm } from "react-hook-form";
+import Select from 'react-select';
 import MyNavbar from '../MyNavbar/MyNavbar';
 import { useState } from 'react';
 import Footer from '../Footer/Footer';
 
 const AddResorts = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const [imgUrl, setImgUrl] = useState(null)
+    const [imgUrl, setImgUrl] = useState(null);
+    const [selectedOption, setSelectedOption] = useState(null);
 
     const onSubmit = data => {
-        const districtName = data.district.toUpperCase()
+
         const resortData = {
 
-            district: districtName,
+            district: selectedOption.value.toUpperCase(),
             name: data.resort,
             img: imgUrl,
+            price: data.price,
             desc: data.desc,
             contact: data.contact
         }
@@ -34,7 +37,7 @@ const AddResorts = () => {
 
 
         })
-            .then(res => console.log(res))
+        .then(res => console.log(res))
         alert('form submitted successfully!')
     };
 
@@ -53,9 +56,24 @@ const AddResorts = () => {
             });
     }
 
+    const handleChange = (selectedOption) => {
+        setSelectedOption(selectedOption);
+    };
+
+    const options = [
+        { value: 'Dhaka', label: 'Dhaka' },
+        { value: 'Barisal', label: 'Barisal' },
+        { value: 'Syhlet', label: 'Syhlet' },
+        { value: 'Rajshahi', label: 'Rajshahi' },
+        { value: 'Mymensingh', label: 'Mymensingh' },
+        { value: 'Khulna', label: 'Khulna' },
+        { value: 'Rangpur', label: 'Rangpur' },
+        { value: 'Chittagong', label: 'Chittagong' },
+      ];
+
     return (
 
-        <div className="bg-dark text-white">
+        <div>
             <MyNavbar></MyNavbar>
 
             <div style={{ height: '80vh', overflowY: 'auto' }}>
@@ -65,13 +83,21 @@ const AddResorts = () => {
 
                     <form className="border border-white p-5" onSubmit={handleSubmit(onSubmit)}>
 
-                        <input placeholder="District Name" {...register("district", { required: true })} /> <br /> <br />
-
+                        {/* <input placeholder="District Name" {...register("district", { required: true })} /> <br /> <br /> */}
+                        <label for="district">Division Name : </label>
+                        <Select
+                            value={selectedOption}
+                            onChange={handleChange}
+                            options={options}
+                        />
+                        <br /> <br />
                         <input placeholder="Resort Name" {...register("resort", { required: true })} /> <br /> <br />
 
                         <input name="image" type="file" onChange={handleImgUpload} /> <br /> <br />
 
                         <textarea rows="6" cols="35" placeholder="Description" {...register("desc", { required: true })} /> <br /> <br />
+
+                        <input type="price" placeholder="price" {...register("price", { required: true })} /> <br /> <br />
 
                         <input type="number" placeholder="Contact Number" {...register("contact", { required: true })} /> <br /> <br />
 

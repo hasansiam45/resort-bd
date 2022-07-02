@@ -4,7 +4,7 @@ import MyNavbar from '../../MyNavbar/MyNavbar'
 import Card from '../Card/Card';
 
 
-const Cox = () => {
+const Khulna = () => {
     
     const [resorts, setResorts] = useState([]);
     
@@ -15,17 +15,17 @@ const Cox = () => {
     }, [])
     
     
-    const coxResorts = resorts.filter(rs => rs.district === `COX'S BAZAR`)
+    const KhulnaResorts = resorts.filter(rs => rs.district === `KHULNA`)
     
     return (
              <div className="overflow-hidden">
             <MyNavbar></MyNavbar>
-            <h1 className="m-3 text-center">Resorts In Cox's Bazar</h1>
+            <h1 className="m-3 text-center">Resorts In Khulna</h1>
             
             <div className="row">
                 {
 
-                    coxResorts.map(resort => <Card resort={resort}></Card>)
+                    KhulnaResorts.map(resort => <Card resort={resort}></Card>)
 
                 }
             </div>
@@ -33,4 +33,4 @@ const Cox = () => {
     )
 }
 
-export default Cox
+export default Khulna

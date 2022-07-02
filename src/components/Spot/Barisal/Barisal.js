@@ -4,7 +4,7 @@ import MyNavbar from '../../MyNavbar/MyNavbar'
 import Card from '../Card/Card';
 
 
-const Bandorban = () => {
+const Barisal = () => {
      const [resorts, setResorts] = useState([]);
     
     useEffect(() => {
@@ -14,19 +14,19 @@ const Bandorban = () => {
     }, [])
     
     
-    const bandorbanResorts = resorts.filter(rs => rs.district === 'BANDORBAN')
+    const barisalResorts = resorts.filter(rs => rs.district === 'BARISAL')
 
     
     return (
 
          <div className="overflow-hidden">
             <MyNavbar></MyNavbar>
-            <h1 className="m-3 text-center">Resorts In Bandorban</h1>
+            <h1 className="m-3 text-center">Resorts In Barisal</h1>
             
         <div className="row">
             {
 
-                bandorbanResorts.map(resort => <Card resort={resort}></Card>)
+                barisalResorts.map(resort => <Card resort={resort}></Card>)
 
             }
         </div>
@@ -34,4 +34,4 @@ const Bandorban = () => {
     )
 }
 
-export default Bandorban
+export default Barisal

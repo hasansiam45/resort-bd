@@ -4,7 +4,7 @@ import MyNavbar from '../../MyNavbar/MyNavbar'
 import Card from '../Card/Card';
 
 
-const Sajek = () => {
+const Mymensingh = () => {
     
         const [resorts, setResorts] = useState([]);
     
@@ -15,17 +15,17 @@ const Sajek = () => {
     }, [])
     
     
-    const sajekResorts = resorts.filter(rs => rs.district === 'SAJEK')
+    const mymensinghResorts = resorts.filter(rs => rs.district === 'MYMENSINGH')
     
     return (
            <div className="overflow-hidden">
             <MyNavbar></MyNavbar>
-            <h1 className="m-3 text-center">Resorts In Sajek</h1>
+            <h1 className="m-3 text-center">Resorts In Mymensingh</h1>
             
             <div className="row">
                 {
 
-                    sajekResorts.map(resort => <Card resort={resort}></Card>)
+                    mymensinghResorts.map(resort => <Card resort={resort}></Card>)
 
                 }
             </div>
@@ -33,4 +33,4 @@ const Sajek = () => {
     )
 }
 
-export default Sajek
+export default Mymensingh

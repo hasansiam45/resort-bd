@@ -14,10 +14,12 @@ import Login from './components/Login/Login';
 import AboutUs from './components/AboutUs/AboutUs';
 import Dhaka from './components/Spot/Dhaka/Dhaka';
 import Chittagong from './components/Spot/Chittagong/Chittagong';
-import Bandorban from './components/Spot/Bandorban/Bandorban';
-import Cox from './components/Spot/Cox/Cox';
-import Sajek from './components/Spot/Sajek/Sajek';
+import Barisal from './components/Spot/Barisal/Barisal';
+import Khulna from './components/Spot/Khulna/Khulna';
+import Rajshahi from './components/Spot/Rajshahi/Rajshahi';
+import Rangpur from './components/Spot/Rangpur/Rangpur';
 import Sylhet from './components/Spot/Sylhet/Sylhet';
+import Mymensingh from './components/Spot/Mymensingh/Mymensingh';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Book from './components/Spot/Booking/Book/Book'
 import AllBookings from './components/AllBookings/AllBookings';
@@ -70,20 +72,28 @@ function App() {
             <Dhaka></Dhaka>
           </Route>
 
-          <Route path="/bandorban">
-            <Bandorban></Bandorban>
+          <Route path="/mymensingh">
+            <Mymensingh></Mymensingh>
+          </Route>
+
+          <Route path="/barisal">
+            <Barisal></Barisal>
+          </Route>
+
+          <Route path="/rangpur">
+            <Rangpur></Rangpur>
           </Route>
 
           <Route path="/chittagong">
             <Chittagong></Chittagong>
           </Route>
 
-          <Route path="/cox">
-            <Cox></Cox>
+          <Route path="/khulna">
+            <Khulna></Khulna>
           </Route>
 
-          <Route path="/sajek">
-            <Sajek></Sajek>
+          <Route path="/rajshahi">
+            <Rajshahi></Rajshahi>
           </Route>
 
           <Route path="/sylhet">
