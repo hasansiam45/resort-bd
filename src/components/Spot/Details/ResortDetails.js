@@ -34,7 +34,7 @@ const ResortDetails = () => {
                             <p><span style={{fontSize: '20px', fontWeight: 'bold'}}> Location: </span> {resortDetails?.district}</p>
                             <p><span style={{fontSize: '20px', fontWeight: 'bold'}}> Description: </span> {resortDetails?.desc}</p>
                             <p><span style={{fontSize: '20px', fontWeight: 'bold'}}> Price: </span> {resortDetails?.price} BDT/day</p>
-                            <p><span style={{fontSize: '20px', fontWeight: 'bold'}}> Contact: </span> {resortDetails?.contact} BDT/day</p>
+                            <p><span style={{fontSize: '20px', fontWeight: 'bold'}}> Contact: </span> {resortDetails?.contact}</p>
                             <button className='btn btn-success text-white' onClick={()=>handleClick(resortDetails._id)}>Book Now</button>
                         </div>
                     </div>
